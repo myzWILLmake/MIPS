@@ -1,0 +1,90 @@
+ALL SUPPORTED INSTRUCTIONS:
+
+			op(6)	rs(5)	rt(5)	rd(5)	shamt(5)funct(6)
+sll rd, rt, shamt	0	0	rt	rd	shamt	0x00
+srl rd, rt, shamt	0	0	rt	rd	shamt	0x02
+sra rd, rt, shamt	0	0	rt	rd	shamt	0x03
+
+sllv rd, rt, rs		0	rs	rt	rd	0	0x04
+srlv rd, rt, rs		0	rs	rt	rd	0	0x06
+srav rd, rt, rs		0	rs	rt	rd	0	0x07
+
+jr rs			0	rs	0	0	0	0x08
+
+jalr rs, rd		0	rs	0	rd	0	0x09
+
+movz rd, rs, rt		0	rs	rt	rd	0	0x0A
+movn rd, rs, rt		0	rs	rt	rd	0	0x0B
+
+mfhi rd			0	0	0	rd	0	0x10
+mthi rs			0	rs	0	0	0	0x11
+mflo rd			0	0	0	rd	0	0x12
+mtlo rs			0	rs	0	0	0	0x13
+
+mult rs, rt		0	rs	rt	0	0	0x18
+multu rs, rt		0	rs	rt	0	0	0x19
+div rs, rt		0	rs	rt	0	0	0x1A
+divu rs, rt		0	rs	rt	0	0	0x1B
+add rd, rs, rt		0	rs	rt	rd	0	0x20
+addu rd, rs, rt		0	rs	rt	rd	0	0x21
+sub rd, rs, rt		0	rs	rt	rd	0	0x22
+subu rd, rs, rt		0	rs	rt	rd	0	0x23
+and rd, rs, rt		0	rs	rt	rd	0	0x24
+or rd, rs, rt		0	rs	rt	rd	0	0x25
+xor rd, rs, rt		0	rs	rt	rd	0	0x26
+nor rd, rs, rt		0	rs	rt	rd	0	0x27
+slt rd, rs, rt		0	rs	rt	rd	0	0x2A
+sltu rd, rs, rt		0	rs	rt	rd	0	0x2B
+tge rs, rt		0	rs	rt	0	0	0x30
+tgeu rs, rt		0	rs	rt	0	0	0x31
+tlt rs, rt		0	rs	rt	0	0	0x32
+tltu rs, rt		0	rs	rt	0	0	0x33
+teq rs, rt		0	rs	rt	0	0	0x34
+tne rs, rt		0	rs	rt	0	0	0x36
+
+bltz rs, label		1	rs	0x00	ofst
+bgez rs, label		1	rs	0x01	ofst
+tgei rs, imm		1	rs	0x08	imm
+tgeiu rs, imm		1	rs	0x09	imm
+tlti rs, imm		1	rs	0x0A	imm
+tltiu rs, imm		1	rs	0x0B	imm
+teqi rs, imm		1	rs	0x0C	imm
+tnei rs, imm		1	rs	0x0E	imm
+bltzal rs, label	1	rs	0x10	ofst
+bgezal rs, label	1	rs	0x11	ofst
+
+j target		0x02	target
+jal target		0x03	target
+beq rs, rt, label	0x04	rs	rt	ofst
+bne rs, rt, label	0x05	rs	rt	ofst
+blez rs, label		0x06	rs	0	ofst
+bgtz rs, label		0x07	rs	0	ofst
+addi rt, rs, imm	0x08	rs	rt	imm
+addiu rt, rs, imm	0x09	rs	rt	imm
+slti rt, rs, imm	0x0A	rs	rt	imm
+sltiu rt, rs, imm	0x0B	rs	rt	imm
+andi rt, rs, imm	0x0C	rs	rt	imm
+ori rt, rs, imm		0x0D	rs	rt	imm
+xori rt, rs, imm	0x0E	rs	rt	imm
+lui rt, imm		0x0F	0	rt	imm
+madd rs, rt		0x1C	rs	rt	0	0	0x00
+maddu rs, rt		0x1C	rs	rt	0	0	0x01
+mul rd, rs, rt		0x1C	rs	rt	rd	0	0x02
+msub rs, rt		0x1C	rs	rt	0	0	0x04
+msubu rs, rt		0x1C	rs	rt	0	0	0x05
+clz rd, rs		0x1C	rs	0	rd	0	0x20
+clo rd, rs		0x1C	rs	0	rd	0	0x21
+lb rt, addr		0x20	rs	rt	ofst
+lh rt, addr		0x21	rs	rt	ofst
+lwl rt, addr		0x22	rs	rt	ofst
+lw rt, addr		0x23	rs	rt	ofst
+lbu rt, addr		0x24	rs	rt	ofst
+lhu rt, addr		0x25	rs	rt	ofst
+lwr rt, addr		0x26	rs	rt	ofst
+sb rt, addr		0x28	rs	rt	ofst
+sh rt, addr		0x29	rs	rt	ofst
+swl rt, addr		0x2A	rs	rt	ofst
+sw rt, addr		0x2B	rs	rt	ofst
+swr rt, addr		0x2E	rs	rt	ofst
+ll rt, addr		0x30	rs	rt	ofst
+sc rt, addr		0x38	rs	rt	ofst
