@@ -1,5 +1,5 @@
-#define MAX_MEM 1024
-#define MAX_INS 1024
+#define MAX_MEM 0xFFFF
+#define MAX_INS 0xFFFF
 typedef long word;
 
 
