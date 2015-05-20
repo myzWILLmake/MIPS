@@ -169,6 +169,33 @@ public:
 						  insAmount = 0;
 						  break;
 			}
+			case 'f': {
+						  string s;
+						  cout << "Please input the file localtion" << endl;
+						  waitInput();
+						  getline(cin, s);
+						  ifstream input(s);
+						  if (input) {
+							  while (1) {
+								  OP* op;
+								  string sins;
+								  getline(input, sins);
+								  if (sins == "quit") {
+									  break;
+								  }
+								  op = MIPS::parse(sins);
+								  if (op != NULL) {
+									  insset[insAmount] = op;
+									  insAmount++;
+								  }
+							  }
+							  cout << "Instructions amount : " << insAmount << endl;
+						  }
+						  else {
+							  cout << "Error: Can not open the file" << endl;
+						  }
+						  break;
+			}
 			case 'q': {	
 						  cout << "Choose the mode:" << endl;
 						  cout << "1.Assembly" << endl;
