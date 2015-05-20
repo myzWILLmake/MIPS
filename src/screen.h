@@ -1,4 +1,3 @@
-
 class screen{
 public:
 	int waitInput() {
@@ -73,37 +72,37 @@ public:
 						  break;
 			}
 			case '4': {
-						  cout << "$zero = " << $zero->val << endl;
-						  cout << "$at = " << $at->val <<endl;
-						  cout << "$v0 = " << $v0->val <<endl;
+						  cout << "$zero = " << $zero->val << " ";
+						  cout << "$at = " << $at->val << " ";
+						  cout << "$v0 = " << $v0->val << " ";
 						  cout << "$v1 = " << $v1->val <<endl;
-						  cout << "$a0 = " << $a0->val <<endl;
-						  cout << "$a1 = " << $a1->val <<endl;
-						  cout << "$a2 = " << $a2->val <<endl;
+						  cout << "$a0 = " << $a0->val << " ";
+						  cout << "$a1 = " << $a1->val << " ";
+						  cout << "$a2 = " << $a2->val << " ";
 						  cout << "$a3 = " << $a3->val <<endl;
-						  cout << "$t0 = " << $t0->val <<endl;
-						  cout << "$t1 = " << $t1->val <<endl;
-						  cout << "$t2 = " << $t2->val <<endl;
+						  cout << "$t0 = " << $t0->val << " ";
+						  cout << "$t1 = " << $t1->val << " ";
+						  cout << "$t2 = " << $t2->val << " ";
 						  cout << "$t3 = " << $t3->val <<endl;
-						  cout << "$t4 = " << $t4->val <<endl;
-						  cout << "$t5 = " << $t5->val <<endl;
-						  cout << "$t6 = " << $t6->val <<endl;
+						  cout << "$t4 = " << $t4->val << " ";
+						  cout << "$t5 = " << $t5->val << " ";
+						  cout << "$t6 = " << $t6->val << " ";
 						  cout << "$t7 = " << $t7->val <<endl;
-						  cout << "$s0 = " << $s0->val <<endl;
-						  cout << "$s1 = " << $s1->val <<endl;
-						  cout << "$s2 = " << $s2->val <<endl;
+						  cout << "$s0 = " << $s0->val << " ";
+						  cout << "$s1 = " << $s1->val << " ";
+						  cout << "$s2 = " << $s2->val << " ";
 						  cout << "$s3 = " << $s3->val <<endl;
-						  cout << "$s4 = " << $s4->val <<endl;
-						  cout << "$s5 = " << $s5->val <<endl;
-						  cout << "$s6 = " << $s6->val <<endl;
+						  cout << "$s4 = " << $s4->val << " ";
+						  cout << "$s5 = " << $s5->val << " ";
+						  cout << "$s6 = " << $s6->val << " ";
 						  cout << "$s7 = " << $s7->val <<endl;
-						  cout << "$t8 = " << $t8->val <<endl;
-						  cout << "$t9 = " << $t9->val <<endl;
-						  cout << "$k0 = " << $k0->val <<endl;
+						  cout << "$t8 = " << $t8->val << " ";
+						  cout << "$t9 = " << $t9->val << " ";
+						  cout << "$k0 = " << $k0->val << " ";
 						  cout << "$k1 = " << $k1->val <<endl;
-						  cout << "$gp = " << $gp->val <<endl;
-						  cout << "$sp = " << $sp->val <<endl;
-						  cout << "$fp = " << $fp->val <<endl;
+						  cout << "$gp = " << $gp->val << " ";
+						  cout << "$sp = " << $sp->val << " ";
+						  cout << "$fp = " << $fp->val << " ";
 						  cout << "$ra = " << $ra->val <<endl;
 						  break;
 			}
