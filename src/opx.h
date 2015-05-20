@@ -826,7 +826,7 @@ public:
 		return wop | OPILS::toCode();
 	}
 	virtual word runOP() {
-		MEM[rs->val + imm] = rt->val & 0x000F;
+		MEM[rs->val + imm] = rt->val & 0x00FF;
 		return 0;
 	}
 	static OP* makeOP(string s) {
@@ -856,8 +856,8 @@ public:
 		return wop | OPILS::toCode();
 	}
 	virtual word runOP() {
-		MEM[rs->val + imm	 ] = (rt->val >> 8) & 0x000F;
-		MEM[rs->val + imm + 1] = (rt->val	  ) & 0x000F;
+		MEM[rs->val + imm	 ] = (rt->val >> 8) & 0x00FF;
+		MEM[rs->val + imm + 1] = (rt->val	  ) & 0x00FF;
 		return 0;
 	}
 	static OP* makeOP(string s) {
@@ -887,8 +887,8 @@ public:
 		return wop | OPILS::toCode();
 	}
 	virtual word runOP() {
-		MEM[rs->val + imm	 ] = (rt->val >> 24) & 0x000F;
-		MEM[rs->val + imm + 1] = (rt->val >> 16) & 0x000F;
+		MEM[rs->val + imm	 ] = (rt->val >> 24) & 0x00FF;
+		MEM[rs->val + imm + 1] = (rt->val >> 16) & 0x00FF;
 		return 0;
 	}
 	static OP* makeOP(string s) {
@@ -918,10 +918,10 @@ public:
 		return wop | OPILS::toCode();
 	}
 	virtual word runOP() {
-		MEM[rs->val + imm	 ] = (rt->val >> 24) & 0x000F;
-		MEM[rs->val + imm + 1] = (rt->val >> 16) & 0x000F;
-		MEM[rs->val + imm + 2] = (rt->val >>  8) & 0x000F;
-		MEM[rs->val + imm + 3] = (rt->val	   ) & 0x000F;
+		MEM[rs->val + imm	 ] = (rt->val >> 24) & 0x00FF;
+		MEM[rs->val + imm + 1] = (rt->val >> 16) & 0x00FF;
+		MEM[rs->val + imm + 2] = (rt->val >>  8) & 0x00FF;
+		MEM[rs->val + imm + 3] = (rt->val	   ) & 0x00FF;
 		return 0;
 	}
 	static OP* makeOP(string s) {
@@ -951,8 +951,8 @@ public:
 		return wop | OPILS::toCode();
 	}
 	virtual word runOP() {
-		MEM[rs->val + imm	 ] = (rt->val >> 8) & 0x000F;
-		MEM[rs->val + imm + 1] = (rt->val) & 0x000F;
+		MEM[rs->val + imm	 ] = (rt->val >> 8) & 0x00FF;
+		MEM[rs->val + imm + 1] = (rt->val) & 0x00FF;
 		return 0;
 	}
 	static OP* makeOP(string s) {
@@ -1012,10 +1012,10 @@ public:
 		return wop | OPILS::toCode();
 	}
 	virtual word runOP() {
-		MEM[rs->val + imm] = (rt->val >> 24) & 0x000F;
-		MEM[rs->val + imm + 1] = (rt->val >> 16) & 0x000F;
-		MEM[rs->val + imm + 2] = (rt->val >> 8) & 0x000F;
-		MEM[rs->val + imm + 3] = (rt->val) & 0x000F;
+		MEM[rs->val + imm] = (rt->val >> 24) & 0x00FF;
+		MEM[rs->val + imm + 1] = (rt->val >> 16) & 0x00FF;
+		MEM[rs->val + imm + 2] = (rt->val >> 8) & 0x00FF;
+		MEM[rs->val + imm + 3] = (rt->val) & 0x00FF;
 		rt->val = 1;
 		return 0;
 	}

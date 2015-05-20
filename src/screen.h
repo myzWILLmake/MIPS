@@ -12,6 +12,7 @@ public:
 
 	int simMode() {
 
+
 		OP* insset[MAX_INS];
 		memset(MEM, 0, MAX_MEM * sizeof(char));
 		memset(insset, NULL, MAX_INS * sizeof(OP*));
@@ -20,6 +21,7 @@ public:
 		LO = 0;
 		EXP = 0;
 		word insAmount = 0;
+
 		cout << "What do you want to do?" << endl;
 		cout << "1.Input instructions" << endl;
 		cout << "2.Run an instruction" << endl;
@@ -70,7 +72,14 @@ public:
 						  break;
 			}
 			case '3': {
+						  cout.setf(ios::showbase);
+						  cout.setf(ios::uppercase);
+						  cout.unsetf(ios::dec);
+						  cout.setf(ios::hex);
+
 						  cout << "PC = " << PC << "	HI = " << HI << "	LO = " << LO << "	EXP = " << EXP << endl;
+
+						  cout.setf(ios::dec);
 						  break;
 			}
 			case '4': {
