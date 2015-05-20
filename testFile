@@ -1,0 +1,15 @@
+lb $t0,0($a0)
+beq $t0,$zero,8
+slti $t1,$t0,65
+bne $t1,$zero,4
+slti $t1,$t0,91
+beq $t1,$zero,2
+ori $t0,$t0,32
+sb $t0,0($a0)
+addi $a0,$a0,1
+j 0
+addi $ra,$ra,15
+quit
+
+#A code for test
+#/* void toLowerCase(char *p) */
