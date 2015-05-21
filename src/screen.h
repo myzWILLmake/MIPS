@@ -22,6 +22,12 @@ public:
 		EXP = 0;
 		word insAmount = 0;
 
+		MEM[0] = 'a';
+		MEM[1] = 'A';
+		MEM[2] = 'B';
+		MEM[3] = 'b';
+		MEM[4] = '\0';
+
 		cout << "What do you want to do?" << endl;
 		cout << "1.Input instructions" << endl;
 		cout << "2.Run an instruction" << endl;
